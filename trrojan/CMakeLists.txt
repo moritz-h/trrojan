@@ -1,5 +1,5 @@
 # CMakeLists.txt
-# Copyright © 2016 - 2023 Visualisierungsinstitut der Universität Stuttgart.
+# Copyright Â© 2016 - 2023 Visualisierungsinstitut der UniversitÃ¤t Stuttgart.
 
 project(trrojan)
 include(FindPkgConfig)
