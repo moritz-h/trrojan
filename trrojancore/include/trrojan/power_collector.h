@@ -16,7 +16,11 @@
 #include <vector>
 
 #if defined(TRROJAN_WITH_POWER_OVERWHELMING)
+#include "power_overwhelming/adl_sensor.h"
 #include "power_overwhelming/collector.h"
+#include "power_overwhelming/hmc8015_sensor.h"
+#include "power_overwhelming/nvml_sensor.h"
+#include "power_overwhelming/tinkerforge_sensor.h"
 #endif /* defined(TRROJAN_WITH_POWER_OVERWHELMING) */
 
 #include "trrojan/export.h"
