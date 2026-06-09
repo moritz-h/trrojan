@@ -46,7 +46,14 @@ endif ()
 
 if (TRROJAN_WITH_POWER_OVERWHELMING)
     target_link_libraries(${PROJECT_NAME} PRIVATE power_overwhelming)
-    #add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy "${POWER_OVERWHELMING_DIR}/${CMAKE_VS_PLATFORM_NAME}/Release/power_overwhelming.dll" "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/$<CONFIG>")
+    #add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    #    COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_RUNTIME_DLLS:${PROJECT_NAME}> $<TARGET_FILE_DIR:${PROJECT_NAME}>
+    #    COMMAND_EXPAND_LISTS)
+    #add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    #    COMMAND ${CMAKE_COMMAND} -E copy "${POWER_OVERWHELMING_DIR}/${CMAKE_VS_PLATFORM_NAME}/Release/power_overwhelming.dll" $<TARGET_FILE_DIR:${PROJECT_NAME}>
+    #    COMMAND_EXPAND_LISTS)
+    #add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    #    COMMAND ${CMAKE_COMMAND} -E copy "${POWER_OVERWHELMING_DIR}/${CMAKE_VS_PLATFORM_NAME}/Release/power_overwhelming.dll" "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/$<CONFIG>")
 endif ()
 
 
