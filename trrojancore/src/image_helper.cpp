@@ -1,5 +1,5 @@
 // <copyright file="image_helper.cpp" company="Visualisierungsinstitut der Universität Stuttgart">
-// Copyright © 2016 - 2024 Visualisierungsinstitut der Universität Stuttgart.
+// Copyright © 2016 - 206 Visualisierungsinstitut der Universität Stuttgart.
 // Licensed under the MIT licence. See LICENCE.txt file in the project root for full licence information.
 // </copyright>
 // <author>Christoph Müller</author>
