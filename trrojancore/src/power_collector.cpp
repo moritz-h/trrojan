@@ -146,6 +146,18 @@ void trrojan::power_collector::set_header(const std::string& uid) {
 
 
 /*
+ * trrojan::power_collector::sync_time
+ */
+void trrojan::power_collector::sync_time(void) {
+    assert(this->_details != nullptr);
+
+    for (auto& s : this->_details->tinkerforge) {
+        s.resync_internal_clock();
+    }
+}
+
+
+/*
  * trrojan::power_collector::start
  */
 void trrojan::power_collector::start(const std::string& file,

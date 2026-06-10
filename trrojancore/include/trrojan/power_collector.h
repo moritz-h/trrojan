@@ -136,6 +136,11 @@ namespace trrojan {
         }
 
         /// <summary>
+        /// Trigger time sync on sensors with internal clock.
+        /// </summary>
+        void sync_time(void);
+
+        /// <summary>
         /// Start all sensors with the specified sampling interval.
         /// </summary>
         void start(const std::string& file,
