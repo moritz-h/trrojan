@@ -184,6 +184,7 @@ std::string trrojan::benchmark_base::enter_power_scope(
         const power_collector::pointer& collector) {
 #if defined(TRROJAN_WITH_POWER_OVERWHELMING)
     if (collector != nullptr) {
+        collector->sync_time();
         // If we have a power sensor, we want to record data now.
         return collector->set_next_unique_description();
     }
